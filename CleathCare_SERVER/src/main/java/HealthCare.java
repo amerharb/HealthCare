@@ -18,7 +18,7 @@ public class HealthCare extends UnicastRemoteObject implements IHealthCare{
         return result;
     }
 
-    public int Exercise(int age, int height, int weight, String gender) throws RemoteException {
+    public int exercise(int age, int height, int weight, String gender) throws RemoteException {
         int result;
         if (age < 30) {
             result = 45;
@@ -30,7 +30,7 @@ public class HealthCare extends UnicastRemoteObject implements IHealthCare{
         return result;
     }
 
-    public boolean Vitamins(int age, String gender) throws RemoteException {
+    public boolean vitamins(int age, String gender) throws RemoteException {
         return gender.equals("F") || age > 40;
     }
 
