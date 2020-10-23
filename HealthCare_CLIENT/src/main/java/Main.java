@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) throws RemoteException, NotBoundException, MalformedURLException {
         IHealthCare myHealthCare = (IHealthCare) Naming.lookup("rmi://localhost:1099/Recommender");
 
-        System.out.println("connection estabtioned to Health Care Server");
+        System.out.println("connection established to Health Care Server");
 
         Scanner scanner = new Scanner(System.in);
         int age = readNumber("enter age:");

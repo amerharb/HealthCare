@@ -5,8 +5,8 @@ import java.rmi.registry.Registry;
 public class Main {
     public static void main(String [] args) throws RemoteException{
 
-        HealthCare f = new HealthCare();
+        HealthCare healthCare = new HealthCare();
         Registry registry = LocateRegistry.createRegistry(1099);
-        registry.rebind("Recommender", f);
+        registry.rebind("Recommender", healthCare);
     }
 }
