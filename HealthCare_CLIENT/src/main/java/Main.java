@@ -14,8 +14,9 @@ public class Main {
         int age = readNumber("enter age:");
         int height = readNumber("enter height (cm):");
         int weight = readNumber("enter weight (kg):");
+        String gender = readGender("enter gender (M/F):");
 
-        int diet = myHealthCare.diet(age,height, weight, "M");
+        int diet = myHealthCare.diet(age, height, weight, gender);
         System.out.println("diet is: " + diet);
     }
 
@@ -30,6 +31,22 @@ public class Main {
             } catch (Exception exception) {
                 System.out.println("invalid try again");
             }
-        } while(true);
+        } while (true);
+    }
+
+    private static String readGender(String msg) {
+        Scanner scanner = new Scanner(System.in);
+        do {
+            try {
+                System.out.println(msg);
+                String line = scanner.nextLine();
+                if (line.equalsIgnoreCase("exit")) System.exit(0);
+                if (line.equalsIgnoreCase("m")) return "M";
+                if (line.equalsIgnoreCase("f")) return "F";
+                System.out.println("invalid try again");
+            } catch (Exception exception) {
+                System.out.println("invalid try again");
+            }
+        } while (true);
     }
 }
