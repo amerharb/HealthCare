@@ -17,7 +17,10 @@ public class Main {
         String gender = readGender("enter gender (M/F):");
 
         int diet = myHealthCare.diet(age, height, weight, gender);
-        System.out.println("diet is: " + diet);
+        int exercise = myHealthCare.exercise(age, height, weight, gender);
+        boolean vitamins = myHealthCare.vitamins(age, gender);
+        System.out.println("the result of age: " + age + ", height: " + height + ", weight: " + weight + ", gender: " + gender);
+        System.out.println("diet: " + diet + " g, exercise: " + exercise + " min, vitamins: " + (vitamins ? "needed" : "not need"));
     }
 
     private static int readNumber(String msg) {
