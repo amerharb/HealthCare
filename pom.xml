@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>CleathCare_SERVER</module>
+        <module>HealthCare_SERVER</module>
         <module>HealthCare_CLIENT</module>
         <module>HealthCare_INTERFACE</module>
     </modules>
